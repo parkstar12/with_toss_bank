@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>시멘틱 태그</title>
+    <!-- Sementic 의미론적 -->
+    <!-- 웹페이지의 공통적인 공간 구성요소를 태그형식으로 분류한 것-->
+    <!-- 공통적인 구성요소: 헤더(Header), 푸터(Footer), 메인(섹션), 
+     사이드(Side), 네비게이션바(메뉴바, Nav) -->
+    <!-- div태그와 기능적으로 똑같다.  -->
+    <!-- header 태그 : 상단공간(헤더)를  -->
+    <!-- nav태그 : 네비게이션(메뉴)-->
+    <!-- footer태그 : 바닥공간 -->
+    <!-- main태그 : 주 콘텐츠 공간(section + aside) -->
+    <!-- section :  주된 콘텐츠-->
+    <!-- aside : 사이드(왼쪽, 오른쪽)공간 -->
+
+    <!-- *-----------------* -->
+    <!-- |   Header(Top)   | -->
+    <!-- *-----------------* -->
+    <!-- |        Nav      | -->
+    <!-- *-----------------*      -->
+    <!-- |      |          |      -->
+    <!-- |Aside | Section  | Main -->
+    <!-- |      |          |      -->
+    <!-- *-----------------* -->
+    <!-- |      Footer     | -->
+    <!-- *-----------------* -->
+
+    <style>
+      * {
+        border: 1px solid red;
+      }
+      ul,
+      li {
+        display: inline;
+      }
+      /* float 가급적 사용하지 않는다. */
+      /* flex box을 사용해서 레이아웃을 잡는다.*/
+      section {
+        /* display :inline로 만들고, 오른쪽으로 정렬*/
+        float: right;
+        width: 80%;
+      }
+      aside {
+        /* display :inline로 만들고, 왼쪽으로 정렬*/
+        float: left;
+        width: 18%;
+      }
+      footer {
+        /* clear :right, left 지워준다. block으로 돌아감.*/
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>헤더영역</header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. D icta
+          eveniet veritatis officia odio accusantium. Autem voluptatem nobis
+          enim necessitatibus harum natus laborum vero velit culpa sequi,
+          reiciendis illum praesentium accusantium!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+          minima aspernatur maiores quia iste necessitatibus magnam aliquam
+          animi consectetur. Nemo culpa rem quasi corrupti temporibus harum
+          dolor error eveniet adipisci!
+        </p>
+      </section>
+      <aside>
+        <li style="display: block"><a href="#">메뉴1</a></li>
+        <li style="display: block"><a href="#">메뉴2</a></li>
+        <li style="display: block"><a href="#">메뉴3</a></li>
+      </aside>
+    </main>
+    <footer>푸터영역</footer>
+  </body>
+</html>

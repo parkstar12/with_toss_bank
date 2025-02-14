@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      let N = 10;
+      let num = Math.floor(Math.random() * N + 1); //0.0~5.99999.....
+      document.write("정수: " + num + "<br>");
+
+      switch (num % 2) {
+        case 0:
+          document.write("짝수입니다. <br>");
+          break;
+
+        case 1:
+          document.write("홀수입니다. <br>");
+          break;
+      }
+
+      let N1 = 6;
+      let dice1 = Math.floor(Math.random() * N1 + 1);
+      let dice2 = Math.floor(Math.random() * N1 + 1);
+      document.write("주사위 : " + (dice1 * 10 + dice2));
+    </script>
+  </head>
+  <body></body>
+</html>

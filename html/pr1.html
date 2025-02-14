@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head> </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>예약자 정보</legend>
+        <label for=" name">예약자</label>
+        <input type="text" id="name" /><br />
+        <label for=" tel">연락처</label>
+        <input type="text" id="tel" /><br />
+        <select name="num">
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+          <option value="4+">5인 이상</option>
+        </select>
+      </fieldset>
+      <br />
+
+      <fieldset>
+        <legend>일자 선택 및 시간 선택</legend>
+        <label for=" date"></label>
+        <input type="date" id="date" />
+        <label for=" time"></label>
+        <input type="time" id="time" /><br />
+      </fieldset>
+      <br />
+      <input type="submit" value="예약" />
+      <input type="reset" value="취소" />
+    </form>
+  </body>
+</html>

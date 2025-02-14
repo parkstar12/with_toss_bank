@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>테이블 입력값 조작하기</title>
+    <script>
+      //연습문제
+      //값 지우기 버튼을 클릭하면, 왼쪽의 입력창의 값을 지우시오.
+      window.onload = () => {
+        makeTable();
+
+        let buttons = document.querySelectorAll("button");
+
+        buttons.forEach((button) => {
+          // 버튼에 클릭 이벤트 리스너 추가
+          button.addEventListener("click", () => {
+            let value = button.getAttribute("value"); // 버튼의 data-value 속성 값 가져오기
+            let inputElement = document.getElementById("input" + value); // 해당 input 요소 가져오기
+            inputElement.value = ""; // input 값 지우기
+          });
+        });
+      };
+    </script>
+    <script>
+      function makeTable() {
+        //document.writeln함수를 이용하여
+        //동적으로 테이블을 작성하시오.
+        document.writeln("<table border=1>");
+        for (var i = 1; i <= 10; i++) {
+          document.writeln("<tr>");
+          document.writeln("<td>목록" + i + "</td>");
+          document.writeln('<td><input id="input' + i + '" type="text"></td>');
+          document.writeln(
+            '<td><button id="btn' +
+              i +
+              '" value="' +
+              i +
+              '">값지우기</button></td>'
+          );
+          document.writeln("</tr>");
+        }
+        document.writeln("</table");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

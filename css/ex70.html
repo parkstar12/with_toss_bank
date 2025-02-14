@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹과 Flex 연결</title>
+    <!-- ex72 -->
+    <style>
+      /* 초기화 코드 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      /* PC해상도 */
+      .wrap {
+        display: flex;
+        flex-flow: column wrap;
+      }
+      .wrap div {
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+      .main {
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .section {
+        flex-grow: 7;
+      }
+      .aside {
+        flex-grow: 3;
+      }
+      /* Tablet해상도 */
+      /* Mobile해상도 */
+    </style>
+  </head>
+  <body>
+    <!-- 전체 콘텐츠를 감싸는 div -->
+    <div class="wrap">
+      <!-- 헤더 -->
+      <div class="header"><p>헤더</p></div>
+      <!-- 네비 -->
+      <div class="nav"><p>네비바</p></div>
+      <!-- 메인 = 세션 + 사이드바 -->
+      <div class="main">
+        <div class="section"><p>세션</p></div>
+        <div class="aside"><p>사이드바</p></div>
+      </div>
+      <!-- 광고 -->
+      <div class="ad"><p>광고</p></div>
+      <!-- 정보 -->
+      <div class="info"><p>정보</p></div>
+      <!-- 푸터 -->
+      <div class="footer"><p>푸터</p></div>
+    </div>
+  </body>
+</html>

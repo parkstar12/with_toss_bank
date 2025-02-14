@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>선택자 - 전체선택자, 태그선택자</title>
+    <!-- 전체선택자 : * -->
+    <!-- 태그선택자 : HTML태그명(ex: h1 p) -->
+  </head>
+  <style>
+    * {
+      color: brown;
+    }
+    h1 {
+      color: red;
+    }
+    h2, /* ,가 있으면 둘다/ 공백으로 두면 h2태그안의 p태그를 의미*/
+    p {
+      background-color: yellow;
+    }
+    body {
+      background-color: skyblue;
+    }
+  </style>
+  <body>
+    <h1>제목태그 H1</h1>
+    <h2>제목태그 H2</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eaque ea
+      perferendis nihil, voluptatem rem consequatur facilis illum voluptas
+      tenetur neque ad expedita mollitia maxime, sint aperiam corrupti! Minus,
+      sint.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor perferendis
+      fuga ipsam praesentium laborum dignissimos culpa sed. Possimus hic sed
+      cumque delectus non, eaque voluptas error iure, aliquid molestiae quaerat.
+    </p>
+  </body>
+</html>

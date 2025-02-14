@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      ////////////////////////////////////////////////////////////////////////////
+      for (let i = 1; i <= 10; i++) {
+        document.write(i + " ");
+      }
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      for (let j = 1; j <= 10; j += 2) {
+        document.write(j + " ");
+      }
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      for (let z = 3; z <= 10; z += 3) {
+        document.write(z + " ");
+      }
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      let total = 0;
+      for (let n = 1; n <= 100; n++) {
+        total += n;
+      }
+      document.write(total);
+      document.write("<br>");
+      //백틱 `숫자1의 왼쪽키`
+      document.write(`sum:${total}<br>`);
+      ////////////////////////////////////////////////////////////////////////////
+      let N1 = 6;
+      for (let a = 0; a < 10; a++) {
+        let dice1 = Math.floor(Math.random() * N1 + 1);
+        document.write("  " + dice1);
+      }
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      let N2 = 100;
+      let Max = 0;
+      for (let b = 0; b < 100; b++) {
+        let com = Math.floor(Math.random() * N2 + 1);
+        if (Max < com) {
+          Max = com;
+        }
+      }
+      document.write(Max);
+      document.write("<br>");
+      //////////////////////////////////////중급//////////////////////////////////////////
+      let count = 0;
+      let total_count = 0;
+      for (let c = 2; c <= 100; c++) {
+        count = 0;
+
+        for (let d = 1; d < c; d++) {
+          if (c % d == 0) {
+            count++;
+          }
+        }
+        if (count == 1) {
+          total_count++;
+        }
+      }
+      document.write(total_count);
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      let N3 = 45;
+      let loto = [];
+      for (let e = 0; e < 6; e++) {
+        let lotto = Math.floor(Math.random() * N3 + 1);
+        if (!loto.includes(lotto)) {
+          loto.push(lotto);
+          document.write(" " + lotto);
+        } else {
+          e--;
+        }
+      }
+      document.write("<br>");
+      ////////////////////////////////////////////////////////////////////////////
+      let d1 = 0;
+      let d2 = 0;
+      let max = 0;
+      let min = 100;
+      for (let f = 0; f < 10; f++) {
+        d1 = Math.floor(Math.random() * N1 + 1);
+        d2 = Math.floor(Math.random() * N1 + 1);
+        if (max < d1 + d2) {
+          max = d1 + d2;
+        }
+        if (min > d1 + d2) {
+          min = d1 + d2;
+        }
+      }
+      document.write(max + " ");
+      document.write(min);
+      document.write("<br>");
+    </script>
+  </head>
+  <body></body>
+</html>
